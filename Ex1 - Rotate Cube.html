@@ -52,7 +52,10 @@
     // main animation loop - calls every 50-60 ms.
     let mainLoop = function() {   
         cube.rotation.y += ADD;
-        
+        if(i < 3) {
+            i = cube.position.y
+            cube.position.y += ADD;
+        }
         renderer.render(scene, camera);
         requestAnimationFrame(mainLoop);
     };
