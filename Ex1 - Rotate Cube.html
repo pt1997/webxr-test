@@ -12,6 +12,7 @@
 <script>    
     let scene, camera, renderer, cube;
     let ADD = 0.1;
+    let i = 0;
     
     let createCube = function() {
         let geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -19,7 +20,7 @@
         cube = new THREE.Mesh( geometry, material );
         scene.add(cube);
     };
-    
+
     // set up the environment - 
     // initiallize scene, camera, objects and renderer
     let init = function() {
@@ -51,7 +52,7 @@
     // main animation loop - calls every 50-60 ms.
     let mainLoop = function() {   
         cube.rotation.y += ADD;
-        let i = 0;
+        
         if(i < 0.5) {
             i = cube.position.y;
             cube.position.y += ADD;
