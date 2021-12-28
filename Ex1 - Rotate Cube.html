@@ -20,7 +20,8 @@
         scene.add(cube);
     };
     
-    
+    geometry.THREE.
+
     // set up the environment - 
     // initiallize scene, camera, objects and renderer
     let init = function() {
@@ -35,9 +36,9 @@
         camera.position.z = 5;
         
         
-        //let axes = new THREE.AxesHelper(5);
-        //scene.add(axes);
-        
+        let axes = new THREE.AxesHelper(5);
+        scene.add(axes);
+
         createCube();
         
         // create the renderer   
@@ -53,10 +54,11 @@
     let mainLoop = function() {   
         cube.rotation.y += ADD;
         let i = 0;
-        if(i < 3) {
+        if(i < 0.5) {
             i = cube.position.y;
             cube.position.y += ADD;
         }
+        
         renderer.render(scene, camera);
         requestAnimationFrame(mainLoop);
     };
