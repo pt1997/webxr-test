@@ -16,7 +16,8 @@
     
     let createCube = function() {
         let geometry = new THREE.BoxGeometry(1, 1, 1);
-        let material = new THREE.MeshBasicMaterial({color: 0x00a1cb});
+        let material = new THREE.MeshBasicMaterial({color: 0x00a1cb,
+                                                    wireframe: true});
         cube = new THREE.Mesh( geometry, material );
         scene.add(cube);
     };
@@ -53,7 +54,7 @@
     let mainLoop = function() {   
         cube.rotation.y += ADD;
         
-        if(i < 0.5) {
+        if(i < 5) {
             i = cube.position.y;
             cube.position.y += ADD;
         }
