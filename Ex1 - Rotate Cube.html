@@ -11,7 +11,7 @@
 
 <script>    
     let scene, camera, renderer, cube;
-    let ADD = 0.1;
+    let ADD = 0.02;
     let i = 0;
     
     let createCube = function() {
@@ -54,7 +54,7 @@
     let mainLoop = function() {   
         cube.rotation.y += ADD;
         
-        if(i < 5) {
+        if(i < 2) {
             i = cube.position.y;
             cube.position.y += ADD;
         }
