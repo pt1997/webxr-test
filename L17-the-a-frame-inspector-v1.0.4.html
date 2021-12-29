@@ -57,7 +57,13 @@
         <!-- Red Light -->
         <a-entity id="red-light" 
                   light="distance: 0.4; intensity: 4; color: #CC0000; type: point"
-                  position="-2.213 4.479 0.369">
+                  position="-2.213 4.479 0.369"
+                  animation="property: position;
+                            to: -2.213 3.633 0.369
+                            loop: true;
+                            dir: alternate;
+                            dur: 3000;
+                            easing: linear">
         </a-entity>
 
         <!-- Your 3D Model 02 | Suburban Street Lamp -->
