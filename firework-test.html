@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <title>firework-test</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <!-- To correct the texture color in 3D models, you want to attache the renderer component
+         to the <a-scene> element and then set the colorManagement property to true (line 18).
+         More details about the Linear and sRGB color space issue here:
+         https://github.com/aframevr/aframe/issues/3509 -->
+        <a-scene renderer="colorManagement: true">
+        <!-- Asset Management System -->
+        <a-assets>
+            <img id="floor" src="L17-ASSETs/floor-1024.jpg">
+        </a-assets>
+
+        <!-- Custom Light | Ambient -->
+        <a-entity light="type: ambient; intensity: 0.2">
+        </a-entity>
+
+        <!-- Custom Light | Directional -->
+        <a-entity light="type: directional; intensity: 0.2" position="-0.5 1 1">
+        </a-entity>
+
+        <!-- Sky -->
+        <a-sky color="#212121"></a-sky>
+
+        <!-- Ground -->
+        <a-plane src="#floor" rotation="-90 0 0" scale="2000 2000 1" repeat="200 200">
+        </a-plane>
+
+        <!-- Camera -->
+        <a-entity position="0 0 9">
+            <a-camera></a-camera>
+        </a-entity>
+
+        <!-- Your 3D Model 01 | Traffic Light -->
+        <!-- https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4
+        <a-entity gltf-model="#tl" position="-3.18 0.25 0" scale="0.18 0.18 0.18">
+        </a-entity>  -->
+        <!-- Red Light
+        <a-entity id="red-light" 
+                  light="distance: 0.4; intensity: 4; color: #CC0000; type: point"
+                  position="-2.213 4.479 0.369"
+                  animation="property: position;
+                            from: -2.213 4.479 0.369;
+                            to: -2.213 3.633 0.369;
+                            loop: true;
+                            dir: alternate;
+                            dur: 3000;
+                            easing: linear">
+        </a-entity>  -->
+
+        <!-- rocket -->
+    <a-cylinder position="0 1 0" radius="0.5"
+                animation="property: position;
+                           to: 0 40 0;
+                           dur: 3000;
+                           easing: easeInOutCubic" >
+    </a-cylinder>
+
+    </a-scene>
+</body>
+</html>
