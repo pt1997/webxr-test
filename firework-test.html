@@ -36,30 +36,13 @@
             <a-camera></a-camera>
         </a-entity>
 
-        <!-- Your 3D Model 01 | Traffic Light -->
-        <!-- https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4
-        <a-entity gltf-model="#tl" position="-3.18 0.25 0" scale="0.18 0.18 0.18">
-        </a-entity>  -->
-        <!-- Red Light
-        <a-entity id="red-light" 
-                  light="distance: 0.4; intensity: 4; color: #CC0000; type: point"
-                  position="-2.213 4.479 0.369"
-                  animation="property: position;
-                            from: -2.213 4.479 0.369;
-                            to: -2.213 3.633 0.369;
-                            loop: true;
-                            dir: alternate;
-                            dur: 3000;
-                            easing: linear">
-        </a-entity>  -->
-
         <!-- rocket -->
         <a-entity   position="0 1 0"
                     animation="property: position;
                     to: 0 50 0;
                     dur: 3000;
                     easing: easeInOutCubic" >
-            <a-cone radius="0.15" position="0 3 0" 
+            <a-cone radiusBottom="0.15" position="0 1.5 0" heigt="0.5" 
             > 
             </a-cone>
             <a-cylinder radius="0.10" scale="1 3 1"
